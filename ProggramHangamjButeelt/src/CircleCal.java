@@ -40,5 +40,6 @@ public class CircleCal {
   int a = 5, b = 2, d = 6, f = 9, g = 8;
   System.out.println("Test");
   System.out.println("Test");
+  System.out.println("Final test");
  }
 }
