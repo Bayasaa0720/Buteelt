@@ -1,45 +1,92 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
-import java.util.*;
 
 public class CircleCal {
- private static final double PI = 3.14;
- private final double radius;
- public CircleCal(double radius) {
- this.radius = radius;
- }
- 
- public double CircleLen() {
-	 return 2 * Math.PI * radius;
- }
- 
- public double CircleAr() {
-	 return Math.PI * radius * radius;
- }
- 
- public double CircleC() {
-	 double b;
-	 b = Math.PI * 2 * radius;
-	 return b;
- }
- 
- 
- public static void main(String[] args) {
- System.out.println("------------------------------------------------------------");
- System.out.println("CircleCalc v1.0");
- System.out.println();
- System.out.println("Calculates and prints information for a user-supplied radius");
- System.out.println("------------------------------------------------------------");
- System.out.print("Enter the circle's radius: ");
- Scanner in = new Scanner(System.in);
- CircleCal c = new CircleCal(in.nextFloat());
- // TODO: compute and print the circumference and area of the circle
- System.out.println("Length of Circle is: ");
- System.out.printf("%.2f\n", c.CircleLen());
- System.out.println("Area of Circle is: ");
- System.out.printf("%.2f\n", c.CircleAr());
-  int a = 5, b = 2, d = 6, f = 9, g = 8;
-  System.out.println("Test");
-  System.out.println("Test");
-  System.out.println("Final test");
- }
+
+    public static int calculateSum(int[] array) {
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+        return sum;
+    }
+    
+    public static double listAverage(int[] array) {
+    	double average = 0;
+    	for(int i = 0; i < array.length; i++) {
+    		average += array[i];
+    	}
+    	average = average / array.length;
+    	
+    	return average;
+    }
+    
+    public static int ListMax(int[] array) {
+    	int max = 0;
+    	for(int i = 0; i < array.length; i++) {
+    		if(array[i] > max) {
+    			max = array[i];
+    		}
+    	}
+    	
+    	return max;
+    }
+    
+    public static int ListMin(int[] array) {
+    	int min = 100;
+    	for(int i = 0; i < array.length; i++) {
+    		if(array[i] < min) {
+    			min = array[i];
+    		}
+    	}
+    	return min;
+    }
+    
+    public static void ListReverse(int[] array) {
+    	int a = array.length;
+    	for(int i = 0; i < array.length / 2; i++) {
+    			int b = array[i];
+    			array[i] = array[a -1 - i];
+    			array[a - 1 - i] = b;
+    	}
+    	
+    }
+    
+	    public static int[] ListFix(int[] array) {
+	    	List<Integer> Listfix = new ArrayList<>();
+	    	for(int i = 0; i < array.length; i++) {
+	    		if(array[i] % 2 == 0) {
+	    			Listfix.add(array[i]);
+	    		}
+	    	}
+	    	int[] NewArray = new int[Listfix.size()];
+	    	for(int i = 0; i < Listfix.size(); i++) {
+	    		NewArray[i] = Listfix.get(i);
+	    	}
+	    	return NewArray;
+	    }
+
+    public static void main(String[] args) {
+        int[] list1 = {3, 6, 2, 5, 7};
+
+        // Calculate the sum of elements in the list1 array
+        int sum = calculateSum(list1);
+        double average = listAverage(list1);
+        int max = ListMax(list1);
+        int min = ListMin(list1);
+        ListReverse(list1);
+        ListFix(list1);
+        
+        int[] lastV = ListFix(list1);
+        
+
+        System.out.println("Sum of elements in the list: " + sum);
+        System.out.println("Average of elements in the list: " + average);
+        System.out.println("Max of elements in the List: " + max);
+        System.out.println("Min of elements in the List: " + min);
+        System.out.println("Reversed List: " + Arrays.toString(list1));
+        System.out.println("Fixed List: " + Arrays.toString(lastV));
+    }
 }
