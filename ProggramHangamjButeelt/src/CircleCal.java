@@ -68,6 +68,8 @@ public class CircleCal {
 	    	return NewArray;
 	    }
 
+	//4:03
+
     public static void main(String[] args) {
         int[] list1 = {3, 6, 2, 5, 7};
         int sum = calculateSum(list1);
