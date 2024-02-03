@@ -79,6 +79,8 @@ public class CircleCal {
         
         int[] lastV = ListFix(list1);
         
+        //4:29
+        
 
         System.out.println("Sum of elements in the list: " + sum);
         System.out.println("Average of elements in the list: " + average);
