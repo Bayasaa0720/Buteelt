@@ -70,8 +70,6 @@ public class CircleCal {
 
     public static void main(String[] args) {
         int[] list1 = {3, 6, 2, 5, 7};
-
-        // Calculate the sum of elements in the list1 array
         int sum = calculateSum(list1);
         double average = listAverage(list1);
         int max = ListMax(list1);
