@@ -68,11 +68,6 @@ public class CircleCal {
 	    	return NewArray;
 	    }
 
-	//4:03
-
-	//4:44 test
-
-	//5:00 test confirmed 1
 
     public static void main(String[] args) {
         int[] list1 = {3, 6, 2, 5, 7};
@@ -85,9 +80,7 @@ public class CircleCal {
         
         int[] lastV = ListFix(list1);
         
-        //3:13 test
-        
-        //4:56 test
+        //test 5:32
         
 
         System.out.println("Sum of elements in the list: " + sum);
