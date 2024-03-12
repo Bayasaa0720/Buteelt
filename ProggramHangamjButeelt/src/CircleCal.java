@@ -83,7 +83,9 @@ public class CircleCal {
         
         int[] lastV = ListFix(list1);
         
-        //4:29 asfasdasd
+        //3:13 test
+        
+        //4:56 test
         
 
         System.out.println("Sum of elements in the list: " + sum);
