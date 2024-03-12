@@ -72,6 +72,8 @@ public class CircleCal {
 
 	//4:44 test
 
+	//4:58 test
+
     public static void main(String[] args) {
         int[] list1 = {3, 6, 2, 5, 7};
         int sum = calculateSum(list1);
